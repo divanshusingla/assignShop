@@ -1,0 +1,17 @@
+<div class="headerData"> 
+    <!-- <input matInput placeholder="Ex. Pizza"> -->
+    <div>
+        <button mat-icon-button class="buttonColor" routerLink="/home" (click)="refresh()">
+        <i class="fa fa-star starIcon"></i></button>
+    </div>
+    <div class="fieldsAndIcons">
+        <mat-form-field>
+              <input matInput class="fieldDataColor" [(ngModel)]="searchText" >
+              <button matSuffix mat-icon-button class="buttonColor">
+                <i class="fa fa-search buttonImageColor" (click)=searchItem(searchText)></i>
+              </button>
+        </mat-form-field>
+        <button mat-icon-button class="buttonColor" routerLink="/cart">
+            <i class="fa fa-shopping-cart buttonImageColor"></i></button>    
+    </div>
+</div>

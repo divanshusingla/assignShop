@@ -1,0 +1,67 @@
+<div class="header"> 
+    <button mat-icon-button routerLink="/home" (click)="refresh()" class="star-button">
+    <i class="fa fa-star star-icon"></i></button>
+</div>
+
+<div class="background">
+    <div  class="all">
+      <!-- Left Side -->
+      <div class="items-box">
+        <div *ngFor="let item of itemsInTheCart" class="loop">
+          <mat-card class="left-card">
+            <div class="image-box">
+                <img mat-card-image src={{item.imageUrl}} class="image"> 
+            </div>
+            <div class="non-image-box">
+              <p class="item-name">{{item.name}}</p>
+              <div class="second-row-content">
+                <div>
+                  <span class="selling-price">₹{{item.discountedPrice}}</span>
+                  <s class="original-price">{{item.price}}</s> 
+                  <span class="discount">{{item.discount}}%off</span>
+                </div>
+                <div class="number-of-product">
+                  <button mat-icon-button>
+                    <i class="fa fa-minus-circle" (click)=subtractQuantity(item)></i>
+                  </button>
+                  <!-- <input matInput value={{product.itemNumber}} style="width: 10px;"> -->
+                  <p class="number">{{item.quantity}}</p>
+                  <button mat-icon-button>
+                    <i class="fa fa-plus-circle" (click)=addQuantity(item)></i>
+                  </button>
+                </div>
+                <div>
+                  <button mat-raised-button (click)="removeItem(item)" class="remove-button">Remove</button>
+                </div>
+              </div>
+            </div>     
+          </mat-card>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="total-box">
+        <mat-card class="right-card">
+          <p class="first-line">PRODUCTS DETAILS</p> 
+          <hr>
+          <div class="grid-box">
+            <div class="content">
+              <p>Price ({{NumberOfItem}}  item) </p> 
+              <p>:</p>
+              <p>₹{{totalSum}}</p>
+            </div>
+      
+            <div class="content">
+              <p> Discount</p> 
+              <p>:</p>
+              <p>₹{{totalDiscount}}</p>
+            </div>
+          </div>
+          <hr>
+          <div class="total">
+            <p>Total Payable</p> 
+            <p>₹{{totalPayment}}</p>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+
+    
+    @media (min-width: 768px){
+        .Large{
+            display: inline-flex;
+            }
+        .Mobile{
+            display: none;
+            }
+       
+    }  
+    @media (max-width: 767px){
+    .Large{
+        display: none;
+        }
+        .Mobile{
+            display: block;
+            }
+    } 

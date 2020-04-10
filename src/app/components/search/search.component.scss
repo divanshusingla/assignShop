@@ -1,0 +1,21 @@
+.header{
+    background-color: blue;
+    color: white;
+    display: inline-flex;
+    width: 100%;
+
+    .star-button{
+        align-self: center;
+        background-color: blue;
+
+        .star-icon{
+            color: #fcba12;
+            font-size: 40px;
+        }
+    }
+}
+.buttonColor
+{
+    background-color: blue;
+    color: white;
+}

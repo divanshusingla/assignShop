@@ -1,0 +1,11 @@
+<div>
+<h3 class="header">Sort Options</h3>
+<mat-radio-group class="radio-group" [(ngModel)]="selectValue">
+  <mat-radio-button class="radio-button" *ngFor="let sortSelection of sortingOptions" [value]="sortSelection">
+    {{sortSelection}}
+  </mat-radio-button>
+</mat-radio-group>
+<hr class="divider">
+<button mat-raised-button (click)="closeDialog()" class="button">Cancel</button>
+<button mat-raised-button (click)="sendSortValue(selectValue)" class="button">Apply</button> 
+</div>

@@ -1,0 +1,184 @@
+.header{
+    background-color: blue;
+    color: white;
+    display: inline-flex;
+    width: 100%;
+
+    .star-button{
+        align-self: center;
+        background-color: blue;
+
+        .star-icon{
+            color: #fcba12;
+            font-size: 40px;
+        }
+    }
+}
+
+.background{
+    background: #f0f3f7;
+    min-height: 100vh;
+
+    .all{
+        display: inline-flex;
+        width: 100%;
+    
+        .items-box{
+            display: block;
+            width: 70%;
+    
+            .loop{
+                padding: 10px;
+    
+                .left-card{
+                    display: inline-flex;
+                    width: 97%;
+    
+                    .image-box{
+                        .image{
+                            height: 150px;
+                            width: 150px;
+                            margin: 10px
+                        }
+                    }
+    
+                    .non-image-box{
+                        display: block;
+                        width: 100%;
+                        
+                        .second-row-content{
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .selling-price{
+                                font-weight: 800;
+                            }
+
+                            .original-price{
+                                margin-left: 5px;
+                                font-size: 14px;
+                            }
+
+                            .discount{
+                                margin-left: 10px;
+                                color: green;
+                                font-size: 15px;
+                            }
+
+                            .number-of-product{
+                                display: inline-flex;
+                                align-items: center;
+
+                                .number{
+                                    width: 10px;
+                                }
+                            }
+
+                            .remove-button{
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .total-box{
+            width:30%;
+            padding: 10px;
+            
+    
+            .right-card{
+                width: 80%;
+                margin-left: 10px;
+
+                .first-line{
+                    font-weight: 700;
+                    text-align: start;
+                }
+        
+                .grid-box{
+                    display: grid;
+        
+                    .content{
+                        display: inline-flex;
+                        justify-content: space-between;
+                        width:95%
+                    }
+                }
+        
+                .total{
+                    display: inline-flex;
+                    justify-content: space-between;
+                    width:95%;
+                    font-weight: 800;
+                }
+            }
+            
+    
+        }
+    }
+}
+
+
+@media (max-width: 767px){
+    .background{
+        .all{
+            display: block;
+    
+            .items-box{
+                width: 100%;
+    
+                .loop{
+                    padding-top: 15px;
+                    padding-bottom: 0px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+    
+            .total-box{
+                width:100%;
+                padding: 10px 0px;
+                text-align: -webkit-center;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 550px){
+    .background{
+        .all{
+            .items-box{
+                .loop{
+                    .left-card{
+                        width: 92%;
+                        .image-box{
+                            .image{
+                                height: 120px;
+                                width: 100px;
+                                border: solid;
+                                margin: 5px
+                            }
+                        }
+
+                        .non-image-box{
+                            margin-left: 5px;
+                            .item-name{
+                                margin: 5px 0px;
+                            }
+
+                            .second-row-content{
+                                display: block;
+                                justify-content: start;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
