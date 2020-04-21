@@ -17,3 +17,31 @@
             display: block;
             }
     } 
+
+
+
+.filterHome
+{
+    width: 100px;
+}
+.sortHome
+{
+ display: block;
+ margin-top: 2%; 
+ 
+ .sortHomeInside
+ {
+     display: inline-flex;
+     margin-left: 50px;
+ }
+}
+
+
+
+.dialogBox
+{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}

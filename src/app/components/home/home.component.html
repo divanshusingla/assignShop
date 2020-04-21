@@ -1,15 +1,15 @@
 
 <app-header></app-header>
 <div class="Large">
-    <div style="width: 100px;">
+    <div class="filterHome">
         <h3>Filters</h3>
         <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
         <p class="price"> Price</p>
         <button mat-raised-button (click)="sendFilterData(minValue,maxValue)" style="background-color: #fcba12;border-radius: 25px;">Apply</button>
     </div>
     
-    <div style="display: block;margin-top: 2%;">
-        <div style="display: inline-flex;margin-left: 50px;">
+    <div class="sortHome">
+        <div class="sortHomeInside">
             <h3>Sort By</h3>
             <button mat-button (click)="sortData('high')">Price -- High Low</button>
             <button mat-button (click)="sortData('low')">Price -- Low High</button>
@@ -19,7 +19,7 @@
     </div>
 </div>
 <div class="Mobile">   
-    <div style="display: inline-flex;width: 100%;justify-content: center;margin-top: 10px;">
+    <div class="dialogBox">
         <button mat-raised-button (click)="openFilterDialog()">Filters</button>
         <button mat-raised-button (click)="openSortDialog()">Sort</button>
     </div>

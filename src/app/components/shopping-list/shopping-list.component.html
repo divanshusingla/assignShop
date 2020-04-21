@@ -1,6 +1,6 @@
 <div style="text-align:center;">
     <div *ngFor="let list of lists;" class="itemCards">
-      <mat-card class="example-card" style="margin-top: 20px;">
+      <mat-card class="example-card cardStyle">
         <img mat-card-image src={{list.imageUrl}} style="height: 200px;width: 200px;">
         <!-- <div *ngIf="value(list)"></div> -->
         <mat-card-content>
@@ -9,7 +9,7 @@
             <s>{{list.price}}</s> 
               {{list.discount}}%off</div>
         </mat-card-content>
-        <mat-card-actions style="text-align: center;">
+        <mat-card-actions class="buttonStyle">
           <button mat-raised-button class="addToCartButton" (click)="addToCart(list)">Add to Cart</button>
         </mat-card-actions>
       </mat-card>
